@@ -122,7 +122,7 @@ const Sidebar = ({ theme }) => {
 
 										<div className="flex items-center mb-4">
 											<a
-												href="linkedin.com/in/tuan-hiep-nguyen-61595529a/"
+												href="https://www.linkedin.com/in/tuan-hiep-nguyen-61595529a/"
 												target="_blank"
 												rel="noreferrer"
 												className="hover:scale-150 transform duration-300"
