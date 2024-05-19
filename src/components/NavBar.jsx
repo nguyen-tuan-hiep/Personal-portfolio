@@ -4,7 +4,6 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
 const Navbar = ({ toggleTheme, theme }) => {
-
 	const navLinkStyle = {
 		padding: "6px 12px",
 		border: "2px solid transparent",
@@ -73,7 +72,7 @@ const Navbar = ({ toggleTheme, theme }) => {
 					</NavLink>
 				</div>
 				<div
-					className={`mr-2 flex items-center cursor-pointer duration-300 font-bold hover:scale-125 transform duration-100 ${
+					className={`mr-2 flex items-center cursor-pointer duration-300 font-bold hover:scale-150 transform duration-100 ${
 						theme === "dark" ? "text-gray-100" : "text-gray-900"
 					}`}
 					onClick={toggleTheme}
@@ -83,7 +82,6 @@ const Navbar = ({ toggleTheme, theme }) => {
 					) : (
 						<DarkModeIcon className="mr-2" />
 					)}
-					{theme === "dark" ? "Light" : "Dark"}
 				</div>
 			</div>
 		</nav>
