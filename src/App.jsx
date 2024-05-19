@@ -1,46 +1,62 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import Sidebar from './components/Sidebar';
-import Navbar from './components/NavBar';
-import About from './components/About';
-import Resume from './components/Resume';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/NavBar";
+import About from "./components/About";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import "./App.css";
 
-const AnimatedRoutes = () => {
-  const location = useLocation(); // This hook returns the current location object
+const App = () => {
+	const [theme, setTheme] = useState("dark");
 
-  return (
-    <TransitionGroup>
-      <CSSTransition
-        key={location.key} // Unique key for each location
-        timeout={300} // Transition duration in milliseconds
-        classNames="fade" // Class name applied during the transition
-      >
-        <Routes location={location}> // Pass location to the Routes component to manage transitions
-          <Route exact path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-      </CSSTransition>
-    </TransitionGroup>
-  );
+	const toggleTheme = () => {
+		setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+	};
+
+	return (
+		<Router>
+			<div
+				className={`flex justify-center h-full ${
+					theme === "dark" ? "dark" : "light"
+				}`}
+			>
+				<div className="sm:w-full lg:w-3/4">
+					<div className="flex flex-col md:flex-row">
+						<Sidebar theme={theme} />
+						<main className="flex-1 md:ml-1/3 lg:ml-1/4 xl:ml-1/5 p-4 md:p-8">
+							<Navbar
+								toggleTheme={toggleTheme}
+								theme={theme}
+							/>
+
+							<Routes>
+								<Route
+									exact
+									path="/"
+									element={<About theme={theme} />}
+									theme={theme}
+								/>
+								<Route
+									path="/about"
+									element={<About theme={theme} />}
+									theme={theme}
+								/>
+								<Route
+									path="/resume"
+									element={<Resume theme={theme} />}
+                />
+                <Route
+									path="/contact"
+									element={<Contact theme={theme} />}
+								/>
+							</Routes>
+						</main>
+					</div>
+				</div>
+			</div>
+		</Router>
+	);
 };
-
-const App = () => (
-  <Router>
-    <div className="flex justify-center h-full">
-      <div className="sm:w-full lg:w-3/4">
-        <div className="flex flex-col md:flex-row">
-          <Sidebar />
-          <main className="flex-1 md:ml-1/3 lg:ml-1/4 xl:ml-1/5 p-4 md:p-8">
-            <Navbar />
-            <AnimatedRoutes /> {/* Use AnimatedRoutes instead of direct Routes */}
-          </main>
-        </div>
-      </div>
-    </div>
-  </Router>
-);
 
 export default App;

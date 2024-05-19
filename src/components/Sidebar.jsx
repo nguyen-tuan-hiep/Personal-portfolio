@@ -6,7 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PlaceIcon from "@mui/icons-material/Place";
 
-const Sidebar = () => {
+const Sidebar = ({ theme }) => {
 	const sidebarRef = useRef(null);
 	const contentRef = useRef(null);
 	const [showDetails, setShowDetails] = useState(false);
@@ -43,7 +43,9 @@ const Sidebar = () => {
 		<>
 			<aside
 				ref={sidebarRef}
-				className="bg-neutral-600 text-white px-8 pt-8 w-full md:w-1/3 lg:w-1/5"
+				className={`${
+					theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
+				} px-8 pt-8 w-full md:w-1/3 lg:w-1/5`}
 			>
 				<div className="sidebar-container">
 					<div className="sidebar-content">
@@ -58,7 +60,11 @@ const Sidebar = () => {
 							</div>
 							<div>
 								<h2 className="text-2xl font-bold mb-4">Nguyen Tuan Hiep</h2>
-								<p className="text-gray-400 text-xl font-bold">
+								<p
+									className={`text-xl font-bold ${
+										theme === "dark" ? "text-gray-400" : "text-gray-200"
+									}`}
+								>
 									Research Assistance
 								</p>
 							</div>
@@ -67,25 +73,28 @@ const Sidebar = () => {
 							{showDetails && (
 								<>
 									<div className="flex items-center mb-4">
-										<PlaceIcon className="text-primary mr-2" />
+										<PlaceIcon className="mr-2" />
 										<span>Hoan Kiem, Hanoi, Vietnam</span>
 									</div>
 
 									<div className="flex flex-row items-center justify-between">
 										<div className="flex items-center mb-4">
-											<a href="mailto:hiep.n120515@sis.hust.edu.vn">
-												<EmailIcon className="text-primary" />
+											<a
+												href="mailto:hiep.n120515@sis.hust.edu.vn"
+												className="hover:scale-150 transform duration-300"
+											>
+												<EmailIcon />
 											</a>
 										</div>
 
-										<div className="flex items-center mb-4">
+										<div className="flex items-center mb-4  w-8">
 											<a
 												href="https://github.com/nguyen-tuan-hiep"
 												target="_blank"
 												rel="noreferrer"
-												className="hover:underline"
+												className="hover:scale-150 transform duration-300"
 											>
-												<GitHubIcon className="text-primary" />
+												<GitHubIcon />
 											</a>
 										</div>
 
@@ -94,9 +103,9 @@ const Sidebar = () => {
 												href="https://www.facebook.com/hiep.nt2002/"
 												target="_blank"
 												rel="noreferrer"
-												className="hover:underline"
+												className="hover:scale-150 transform duration-300"
 											>
-												<FacebookIcon className="text-primary" />
+												<FacebookIcon />
 											</a>
 										</div>
 
@@ -105,9 +114,9 @@ const Sidebar = () => {
 												href="https://www.instagram.com/nguyen.tuan.hiep"
 												target="_blank"
 												rel="noreferrer"
-												className="hover:underline"
+												className="hover:scale-150 transform duration-300"
 											>
-												<InstagramIcon className="text-primary" />
+												<InstagramIcon />
 											</a>
 										</div>
 
@@ -116,9 +125,9 @@ const Sidebar = () => {
 												href="linkedin.com/in/tuan-hiep-nguyen-61595529a/"
 												target="_blank"
 												rel="noreferrer"
-												className="hover:underline"
+												className="hover:scale-150 transform duration-300"
 											>
-												<LinkedInIcon className="text-primary" />
+												<LinkedInIcon />
 											</a>
 										</div>
 									</div>
@@ -129,7 +138,9 @@ const Sidebar = () => {
 							{window.innerWidth <= 640 && (
 								<button
 									onClick={toggleDetails}
-									className="text-gray-400 font-bold text-lg hover:text-primary focus:outline-none mb-4"
+									className={`text-gray-400 font-bold text-lg hover:text-primary focus:outline-none mb-4 ${
+										theme === "dark" ? "text-gray-400" : "text-gray-600"
+									}`}
 								>
 									{showDetails ? "Show less" : "Show more"}
 								</button>

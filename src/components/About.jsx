@@ -1,15 +1,19 @@
 import React from "react";
 
-const About = () => (
+const About = ({ theme }) => (
 	<section className="pt-8">
-		<div className="text-white">
+		<div className="">
 			{/* <h1 className="text-3xl md:text-4xl font-bold mb-8">About Me</h1> */}
 
 			<div className="mb-8">
 				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Background
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600 indent-8">
+				<div
+					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg indent-8 ${
+						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
+					}`}
+				>
 					<p>
 						I am a dedicated Research Assistant based in Hanoi, Vietnam, with a
 						strong passion for technology and innovation. My expertise spans
@@ -36,7 +40,11 @@ const About = () => (
 				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					What I am doing
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600 indent-8">
+				<div
+					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg indent-8 ${
+						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
+					}`}
+				>
 					<p>
 						I'm just a student learning as I go, figuring things out as I go
 						along.
@@ -46,18 +54,33 @@ const About = () => (
 
 			<div className="mb-8">
 				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
-					Favorite Quotes
+					Favorite quotes
 				</h2>
-				<div className="bg-cardBg p-4 mb-4 md:p-6 rounded-lg shadow-lg bg-neutral-600 indent-8">
+				<div
+					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg indent-8 ${
+						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
+					} mb-4`}
+				>
 					<p>
-						"Success is not the key to happiness. Happiness is the key to
-						success. If you love what you are doing, you will be successful." - Albert Schweitzer
+						<i>
+							"Success is not the key to happiness. Happiness is the key to
+							success. If you love what you are doing, you will be successful."
+						</i>
+						{" "}- <b>Albert Schweitzer</b>
 					</p>
 				</div>
 
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600 indent-8">
+				<div
+					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg indent-8 ${
+						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
+					}`}
+				>
 					<p>
-						"Trăm triệu hạt mưa rơi không có hạt nào rơi nhầm chỗ. Tất cả những người ta từng gặp không một ai là ngẫu nhiên." - Thiền Sư Thích Nhất Hạnh
+						<i>
+							"Trăm triệu hạt mưa rơi không có hạt nào rơi nhầm chỗ. Tất cả
+							những người ta từng gặp không một ai là ngẫu nhiên."
+						</i>
+						{"  "}- <b>Thiền Sư Thích Nhất Hạnh</b>
 					</p>
 				</div>
 			</div>
