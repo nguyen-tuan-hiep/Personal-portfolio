@@ -6,15 +6,15 @@ const Resume = () => (
 			{/* <h1 className="text-3xl md:text-4xl font-bold mb-8">Resume</h1> */}
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-gray-600 pb-2">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Education
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600">
 					<p className="text-lg md:text-xl font-bold">
 						Hanoi University of Science and Technology (HUST), Data Science -
 						Machine Learning - AI - Big Data
 					</p>
-					<p className="text-gray-400">Oct 2020 – Present</p>
+					<p className="text-neutral-400">Oct 2020 – Present</p>
 					<p>Global Information and Communication Technology (Global ICT)</p>
 					<p>CPA: 3.67/4.0</p>
 					<p>Status: Undergraduate</p>
@@ -22,10 +22,10 @@ const Resume = () => (
 			</div>
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-gray-600 pb-2">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Publications
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600">
 					<ul className="list-disc list-inside space-y-3">
 						<li>
 							Claudio Kohn,{" "}
@@ -60,10 +60,10 @@ const Resume = () => (
 			</div>
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-gray-600 pb-2">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Research Experiences
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg mb-4">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg mb-4 bg-neutral-600">
 					<h3 className="text-lg md:text-xl font-bold mb-4">
 						AIoT research group at BKAI center, HUST
 					</h3>
@@ -77,7 +77,7 @@ const Resume = () => (
 						</li>
 					</ul>
 				</div>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600">
 					<h3 className="text-lg md:text-xl font-bold mb-4">
 						AIoT research group at BKAI center, HUST
 					</h3>
@@ -98,10 +98,10 @@ const Resume = () => (
 			</div>
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-gray-600 pb-2">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Courseworks
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600">
 					<ul className="list-disc list-inside space-y-2">
 						<li className="group">
 							<div className="tooltip">
@@ -160,10 +160,10 @@ const Resume = () => (
 			</div>
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-gray-600 pb-2">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Skills
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600">
 					<ul className="list-disc list-inside space-y-2">
 						<li>Programming Languages: Python, Java, JavaScript, C/C++, SQL</li>
 						<li>Machine Learning Libraries: Scikit-learn, Numpy, Pandas</li>
@@ -179,10 +179,10 @@ const Resume = () => (
 			</div>
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-gray-600 pb-2">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Honors and Awards
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600">
 					<ul className="list-disc list-inside space-y-2">
 						<li>
 							Certificate of Commendation from the University President, HUST
@@ -194,10 +194,10 @@ const Resume = () => (
 			</div>
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-gray-600 pb-2">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					References
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600">
 					<ul className="list-disc list-inside">
 						<li>
 							Assoc. Prof. Phi Le Nguyen, Managing Director of the International
@@ -208,10 +208,10 @@ const Resume = () => (
 			</div>
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-gray-600 pb-2">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Social Activities
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600">
 					<ul className="list-disc list-inside space-y-2">
 						<li>Worked at the Student Association of HUST</li>
 						<li>Lead pianist at HALA band</li>

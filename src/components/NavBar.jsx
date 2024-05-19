@@ -22,8 +22,8 @@ const Navbar = () => {
 
 	return (
 		<nav className="bg-neutral-600 shadow-md rounded-lg">
-			<div className="container mx-auto px-4 py-3 flex justify-center">
-				<ul className="flex items-center space-x-20">
+			<div className="container mx-auto px-4 py-3 ">
+				<ul className="flex flex-row justify-between md:justify-start md:gap-8">
 					<li>
 						<NavLink
 							to="/about"
@@ -46,17 +46,6 @@ const Navbar = () => {
 							Resume
 						</NavLink>
 					</li>
-					{/* <li>
-						<NavLink
-							to="/portfolio"
-							className="nav-link"
-							style={navLinkStyle}
-							onMouseOver={handleHover}
-							onMouseLeave={handleMouseLeave}
-						>
-							Portfolio
-						</NavLink>
-					</li> */}
 					<li>
 						<NavLink
 							to="/contact"
@@ -68,6 +57,7 @@ const Navbar = () => {
 							Contact
 						</NavLink>
 					</li>
+
 				</ul>
 			</div>
 		</nav>

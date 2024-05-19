@@ -6,8 +6,10 @@ const About = () => (
 			{/* <h1 className="text-3xl md:text-4xl font-bold mb-8">About Me</h1> */}
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4">Background</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg text-lg">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
+					Background
+				</h2>
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600 indent-8">
 					<p>
 						I am a dedicated Research Assistant based in Hanoi, Vietnam, with a
 						strong passion for technology and innovation. My expertise spans
@@ -31,13 +33,31 @@ const About = () => (
 			</div>
 
 			<div className="mb-8">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-4">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					What I am doing
 				</h2>
-				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg text-lg">
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600 indent-8">
 					<p>
-						I don't know what I am doing. I am just a student who is trying to
-						learn.
+						I'm just a student learning as I go, figuring things out as I go
+						along.
+					</p>
+				</div>
+			</div>
+
+			<div className="mb-8">
+				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
+					Favorite Quotes
+				</h2>
+				<div className="bg-cardBg p-4 mb-4 md:p-6 rounded-lg shadow-lg bg-neutral-600 indent-8">
+					<p>
+						"Success is not the key to happiness. Happiness is the key to
+						success. If you love what you are doing, you will be successful." - Albert Schweitzer
+					</p>
+				</div>
+
+				<div className="bg-cardBg p-4 md:p-6 rounded-lg shadow-lg bg-neutral-600 indent-8">
+					<p>
+						"Trăm triệu hạt mưa rơi không có hạt nào rơi nhầm chỗ. Tất cả những người ta từng gặp không một ai là ngẫu nhiên." - Thiền Sư Thích Nhất Hạnh
 					</p>
 				</div>
 			</div>

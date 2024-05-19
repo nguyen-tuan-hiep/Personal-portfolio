@@ -1,9 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
+import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import PlaceIcon from "@mui/icons-material/Place";
 
 const Sidebar = () => {
 	const sidebarRef = useRef(null);
 	const contentRef = useRef(null);
-	const [showDetails, setShowDetails] = useState(true);
+	const [showDetails, setShowDetails] = useState(false);
 
 	useEffect(() => {
 		const setSidebarHeight = () => {
@@ -11,13 +17,12 @@ const Sidebar = () => {
 				sidebarRef.current.style.height = "auto";
 				sidebarRef.current.style.position = "static";
 				contentRef.current.style.paddingLeft = "0";
-				showDetails && setShowDetails(false);
 			} else {
 				sidebarRef.current.style.height = window.innerHeight + "px";
 				sidebarRef.current.style.position = "fixed";
 				contentRef.current.style.paddingLeft =
 					sidebarRef.current.offsetWidth + "px";
-				showDetails && setShowDetails(true);
+				setShowDetails(true);
 			}
 		};
 
@@ -38,49 +43,93 @@ const Sidebar = () => {
 		<>
 			<aside
 				ref={sidebarRef}
-				className="bg-neutral-500 text-white p-8 w-full md:w-1/3 lg:w-1/5"
+				className="bg-neutral-600 text-white px-8 pt-8 w-full md:w-1/3 lg:w-1/5"
 			>
 				<div className="sidebar-container">
 					<div className="sidebar-content">
-						<div className="text-center mb-8">
-							<img
-								src="./me.jpg"
-								alt="Profile"
-								className="rounded-3xl mx-auto mb-4"
-							/>
-							<h2 className="text-2xl font-bold mb-4">Nguyen Tuan Hiep</h2>
-							<p className="text-gray-700 text-xl font-bold">Research Assistance</p>
+						{/* khi màn hình mở rộng thì div con sẽ nằm trên nhau */}
+						<div className="text-center flex items-center space-x-10 md:space-x-0 justify-center md:block md:mb-8">
+							<div>
+								<img
+									src="./me.jpg"
+									alt="Profile"
+									className="rounded-3xl mx-auto mb-4 sm:w-40 sm:h-40 w-32 h-32"
+								/>
+							</div>
+							<div>
+								<h2 className="text-2xl font-bold mb-4">Nguyen Tuan Hiep</h2>
+								<p className="text-gray-400 text-xl font-bold">
+									Research Assistance
+								</p>
+							</div>
 						</div>
-						<div className="">
+						<div>
 							{showDetails && (
 								<>
 									<div className="flex items-center mb-4">
-										<i className="fas fa-envelope text-primary mr-2"></i>
-										<span className="email-address truncate">
-											hiep.n120515@sis.hust.edu.vn
-										</span>
+										<PlaceIcon className="text-primary mr-2" />
+										<span>Hoan Kiem, Hanoi, Vietnam</span>
 									</div>
 
-									<div className="flex items-center mb-4">
-										<i className="fas fa-phone text-primary mr-2"></i>
-										<span>(+84) 35 587 1065</span>
-									</div>
-									<div className="flex items-center mb-4">
-										<i className="fas fa-calendar text-primary mr-2"></i>
-										<span>September 1st, 2002</span>
-									</div>
-									<div className="flex items-center mb-4">
-										<i className="fas fa-map-marker-alt text-primary mr-2"></i>
-										<span>Hoan Kiem, Hanoi, Vietnam</span>
+									<div className="flex flex-row items-center justify-between">
+										<div className="flex items-center mb-4">
+											<a href="mailto:hiep.n120515@sis.hust.edu.vn">
+												<EmailIcon className="text-primary" />
+											</a>
+										</div>
+
+										<div className="flex items-center mb-4">
+											<a
+												href="https://github.com/nguyen-tuan-hiep"
+												target="_blank"
+												rel="noreferrer"
+												className="hover:underline"
+											>
+												<GitHubIcon className="text-primary" />
+											</a>
+										</div>
+
+										<div className="flex items-center mb-4">
+											<a
+												href="https://www.facebook.com/hiep.nt2002/"
+												target="_blank"
+												rel="noreferrer"
+												className="hover:underline"
+											>
+												<FacebookIcon className="text-primary" />
+											</a>
+										</div>
+
+										<div className="flex items-center mb-4">
+											<a
+												href="https://www.instagram.com/nguyen.tuan.hiep"
+												target="_blank"
+												rel="noreferrer"
+												className="hover:underline"
+											>
+												<InstagramIcon className="text-primary" />
+											</a>
+										</div>
+
+										<div className="flex items-center mb-4">
+											<a
+												href="linkedin.com/in/tuan-hiep-nguyen-61595529a/"
+												target="_blank"
+												rel="noreferrer"
+												className="hover:underline"
+											>
+												<LinkedInIcon className="text-primary" />
+											</a>
+										</div>
 									</div>
 								</>
 							)}
 						</div>
 						<div className="flex justify-center space-x-4">
-							{window.innerWidth <= 768 && (
+							{window.innerWidth <= 640 && (
 								<button
 									onClick={toggleDetails}
-									className="text-gray-400 hover:text-primary focus:outline-none"
+									className="text-gray-400 font-bold text-lg hover:text-primary focus:outline-none mb-4"
 								>
 									{showDetails ? "Show less" : "Show more"}
 								</button>
