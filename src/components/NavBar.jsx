@@ -1,45 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import StyledNavLink from "./StyledNavLink";
 
 const Navbar = ({ toggleTheme, theme }) => {
-	const navLinkStyle = {
-		padding: "6px 12px",
-		border: "2px solid transparent",
-		borderRadius: "10px",
-		transition: "background-color 0.3s ease",
-		boxShadow: "0 2px 6px rgba(0, 0, 0, 0.7)",
-		color: theme === "dark" ? "white" : "black",
-	};
-
-	const activeStyle = {
-		backgroundColor: theme === "dark" ? "rgb(212 212 212)" : "rgb(64 64 64)",
-		color: theme === "dark" ? "black" : "white",
-	};
-
-	const handleHover = (event) => {
-		if (theme === "dark") {
-			event.target.style.backgroundColor = "rgb(212 212 212)";
-			event.target.style.color = "black";
-		} else {
-			event.target.style.backgroundColor = "rgb(64 64 64)";
-			event.target.style.color = "white";
-		}
-	};
-
-	const handleMouseLeave = (event) => {
-		if (!event.target.classList.contains("active")) {
-			if (theme === "dark") {
-				event.target.style.backgroundColor = "transparent";
-				event.target.style.color = "#f3f4f6";
-			} else {
-				event.target.style.backgroundColor = "transparent";
-				event.target.style.color = "black";
-			}
-		}
-	};
-
 	return (
 		<nav
 			className={`${
@@ -48,42 +12,26 @@ const Navbar = ({ toggleTheme, theme }) => {
 		>
 			<div className="container mx-auto p-4 flex justify-between">
 				<div className="flex flex-row justify-start gap-4 font-bold">
-					<NavLink
+					<StyledNavLink
 						to="/about"
-						className="nav-link"
-						onMouseOver={handleHover}
-						onMouseLeave={handleMouseLeave}
-						style={({ isActive }) =>
-							isActive ? { ...navLinkStyle, ...activeStyle } : navLinkStyle
-						}
+						theme={theme}
 					>
 						About
-					</NavLink>
+					</StyledNavLink>
 
-					<NavLink
+					<StyledNavLink
 						to="/resume"
-						className="nav-link"
-						onMouseOver={handleHover}
-						onMouseLeave={handleMouseLeave}
-						style={({ isActive }) =>
-							isActive ? { ...navLinkStyle, ...activeStyle } : navLinkStyle
-						}
+						theme={theme}
 					>
 						Resume
-					</NavLink>
+					</StyledNavLink>
 
-					<NavLink
+					<StyledNavLink
 						to="/contact"
-						className="nav-link"
-						// style={navLinkStyle}
-						onMouseOver={handleHover}
-						onMouseLeave={handleMouseLeave}
-						style={({ isActive }) =>
-							isActive ? { ...navLinkStyle, ...activeStyle } : navLinkStyle
-						}
+						theme={theme}
 					>
 						Contact
-					</NavLink>
+					</StyledNavLink>
 				</div>
 				<div
 					className={`mr-2 flex items-center cursor-pointer duration-300 font-bold hover:scale-150 transform duration-100 ${
