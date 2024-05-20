@@ -13,6 +13,11 @@ const Navbar = ({ toggleTheme, theme }) => {
 		color: theme === "dark" ? "white" : "black",
 	};
 
+	const activeStyle = {
+		backgroundColor: theme === "dark" ? "rgb(212 212 212)" : "rgb(64 64 64)",
+		color: theme === "dark" ? "black" : "white",
+	};
+
 	const handleHover = (event) => {
 		if (theme === "dark") {
 			event.target.style.backgroundColor = "rgb(212 212 212)";
@@ -24,12 +29,14 @@ const Navbar = ({ toggleTheme, theme }) => {
 	};
 
 	const handleMouseLeave = (event) => {
-		if (theme === "dark") {
-			event.target.style.backgroundColor = "transparent";
-			event.target.style.color = "#f3f4f6";
-		} else {
-			event.target.style.backgroundColor = "transparent";
-			event.target.style.color = "black";
+		if (!event.target.classList.contains("active")) {
+			if (theme === "dark") {
+				event.target.style.backgroundColor = "transparent";
+				event.target.style.color = "#f3f4f6";
+			} else {
+				event.target.style.backgroundColor = "transparent";
+				event.target.style.color = "black";
+			}
 		}
 	};
 
@@ -44,9 +51,11 @@ const Navbar = ({ toggleTheme, theme }) => {
 					<NavLink
 						to="/about"
 						className="nav-link"
-						style={navLinkStyle}
 						onMouseOver={handleHover}
 						onMouseLeave={handleMouseLeave}
+						style={({ isActive }) =>
+							isActive ? { ...navLinkStyle, ...activeStyle } : navLinkStyle
+						}
 					>
 						About
 					</NavLink>
@@ -54,9 +63,11 @@ const Navbar = ({ toggleTheme, theme }) => {
 					<NavLink
 						to="/resume"
 						className="nav-link"
-						style={navLinkStyle}
 						onMouseOver={handleHover}
 						onMouseLeave={handleMouseLeave}
+						style={({ isActive }) =>
+							isActive ? { ...navLinkStyle, ...activeStyle } : navLinkStyle
+						}
 					>
 						Resume
 					</NavLink>
@@ -64,9 +75,12 @@ const Navbar = ({ toggleTheme, theme }) => {
 					<NavLink
 						to="/contact"
 						className="nav-link"
-						style={navLinkStyle}
+						// style={navLinkStyle}
 						onMouseOver={handleHover}
 						onMouseLeave={handleMouseLeave}
+						style={({ isActive }) =>
+							isActive ? { ...navLinkStyle, ...activeStyle } : navLinkStyle
+						}
 					>
 						Contact
 					</NavLink>

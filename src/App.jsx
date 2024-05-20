@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Navigate,
+} from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/NavBar";
 import About from "./components/About";
@@ -29,24 +34,20 @@ const App = () => {
 								toggleTheme={toggleTheme}
 								theme={theme}
 							/>
-
 							<Routes>
 								<Route
-									exact
 									path="/"
-									element={<About theme={theme} />}
-									theme={theme}
+									element={<Navigate to="/about" />}
 								/>
 								<Route
 									path="/about"
 									element={<About theme={theme} />}
-									theme={theme}
 								/>
 								<Route
 									path="/resume"
 									element={<Resume theme={theme} />}
-                />
-                <Route
+								/>
+								<Route
 									path="/contact"
 									element={<Contact theme={theme} />}
 								/>
