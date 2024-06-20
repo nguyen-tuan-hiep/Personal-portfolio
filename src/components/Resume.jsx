@@ -61,7 +61,7 @@ const Resume = ({ theme }) => (
 							</em>
 							, Ngoc Anh Tong, Phi Le Nguyen, “Applying Machine Learning
 							techniques to predict water indices of the Mekong river" (To be
-							submitted).
+							submitted) (co-first author).
 						</li>
 					</ul>
 				</div>

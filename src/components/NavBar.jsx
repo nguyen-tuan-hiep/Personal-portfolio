@@ -12,24 +12,15 @@ const Navbar = ({ toggleTheme, theme }) => {
 		>
 			<div className="container mx-auto p-4 flex justify-between">
 				<div className="flex flex-row justify-start gap-4 font-bold">
-					<StyledNavLink
-						to="/about"
-						theme={theme}
-					>
+					<StyledNavLink to="/about" theme={theme}>
 						About
 					</StyledNavLink>
 
-					<StyledNavLink
-						to="/resume"
-						theme={theme}
-					>
+					<StyledNavLink to="/resume" theme={theme}>
 						Resume
 					</StyledNavLink>
 
-					<StyledNavLink
-						to="/contact"
-						theme={theme}
-					>
+					<StyledNavLink to="/contact" theme={theme}>
 						Contact
 					</StyledNavLink>
 				</div>
@@ -40,9 +31,9 @@ const Navbar = ({ toggleTheme, theme }) => {
 					onClick={toggleTheme}
 				>
 					{theme === "dark" ? (
-						<LightModeIcon className="mr-2" />
+						<LightModeIcon/>
 					) : (
-						<DarkModeIcon className="mr-2" />
+						<DarkModeIcon/>
 					)}
 				</div>
 			</div>
