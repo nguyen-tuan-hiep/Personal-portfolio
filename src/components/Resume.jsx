@@ -48,7 +48,11 @@ const Resume = ({ theme }) => (
 				>
 					{/* Left column for the timeline, with flex and items-center for vertical centering */}
 					<div className="w-1/5 flex items-center text-neutral-400 pr-6">
-						<div className="text-center">
+						<div
+							className={`text-center font-semibold ${
+								theme === "dark" ? "text-neutral-400" : "text-neutral-700"
+							}`}
+						>
 							<p>Oct 2020</p>
 							<p>|</p>
 							<p>Sep 2024</p>
@@ -76,9 +80,12 @@ const Resume = ({ theme }) => (
 					} flex`}
 				>
 					{/* Left column for the timeline, with flex and items-center for vertical centering */}
-					<div className="w-1/5 flex items-center text-neutral-400 pr-6"
-					>
-						<div className="text-center">
+					<div className="w-1/5 flex items-center text-neutral-400 pr-6">
+						<div
+							className={`text-center font-semibold ${
+								theme === "dark" ? "text-neutral-400" : "text-neutral-700"
+							}`}
+						>
 							<p>Aug 2024</p>
 							<p>|</p>
 							<p>Present</p>

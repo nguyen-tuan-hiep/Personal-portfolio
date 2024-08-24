@@ -41,7 +41,7 @@ const Sidebar = ({ theme }) => {
 								<h2 className="text-2xl font-bold mb-4">Nguyen Tuan Hiep</h2>
 								<p
 									className={`text-xl font-bold ${
-										theme === "dark" ? "text-gray-400" : "text-gray-200"
+										theme === "dark" ? "text-neutral-400" : "text-neutral-700"
 									}`}
 								>
 									PhD Student
