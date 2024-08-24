@@ -2,26 +2,99 @@ import React from "react";
 
 const Resume = ({ theme }) => (
 	<section className="pt-8">
-		<div className="">
-			{/* <h1 className="text-3xl md:text-4xl font-bold mb-8">Resume</h1> */}
-
-			<div className="mb-8">
+		<div>
+			<div className="mb-4">
 				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
 					Education
 				</h2>
-				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+
+				{/* <div
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg mb-4 ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
 					}`}
 				>
 					<p className="text-lg md:text-xl font-bold">
-						Hanoi University of Science and Technology (HUST), Data Science -
-						Machine Learning - AI - Big Data
+						Hanoi University of Science and Technology (HUST)
 					</p>
-					<p className="text-neutral-400">Oct 2020 – Present</p>
-					<p>Global Information and Communication Technology (Global ICT)</p>
-					<p><b>CPA</b>: 3.xx/4.0 (Excellent)</p>
-					<p><b>Status</b>: Undergraduate</p>
+					<p>
+						Bachelor - Global Information and Communication Technology (Global
+						ICT)
+					</p>
+					<p className="text-neutral-400">Oct 2020 – Sep 2024</p>
+					<p>
+						<b>Status</b>: Graduated (Excellent)
+					</p>
+				</div>
+
+				<div
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
+						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
+					}`}
+				>
+					<p className="text-lg md:text-xl font-bold">
+						National Univsersity of Singapore (NUS)
+					</p>
+					<p>PhD - Computer Engineering</p>
+					<p className="text-neutral-400">Aug 2024 – Present</p>
+					<p>
+						<b>Status</b>: Expected to graduate in 2028
+					</p>
+				</div> */}
+
+				<div
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg mb-4 ${
+						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
+					} flex`}
+				>
+					{/* Left column for the timeline, with flex and items-center for vertical centering */}
+					<div className="w-1/5 flex items-center text-neutral-400 pr-6">
+						<div className="text-center">
+							<p>Oct 2020</p>
+							<p>|</p>
+							<p>Sep 2024</p>
+						</div>
+					</div>
+
+					{/* Right column for education details */}
+					<div className="w-4/5">
+						<p className="text-lg md:text-xl font-bold">
+							Hanoi University of Science and Technology (HUST)
+						</p>
+						<p>
+							Bachelor - Global Information and Communication Technology (Global
+							ICT)
+						</p>
+						<p>
+							<b>Status</b>: Graduated (Excellent)
+						</p>
+					</div>
+				</div>
+
+				<div
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
+						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
+					} flex`}
+				>
+					{/* Left column for the timeline, with flex and items-center for vertical centering */}
+					<div className="w-1/5 flex items-center text-neutral-400 pr-6"
+					>
+						<div className="text-center">
+							<p>Aug 2024</p>
+							<p>|</p>
+							<p>Present</p>
+						</div>
+					</div>
+
+					{/* Right column for education details */}
+					<div className="w-4/5">
+						<p className="text-lg md:text-xl font-bold">
+							National University of Singapore (NUS)
+						</p>
+						<p>PhD - Computer Engineering</p>
+						<p>
+							<b>Status</b>: Expected to graduate in 2028
+						</p>
+					</div>
 				</div>
 			</div>
 
@@ -30,7 +103,7 @@ const Resume = ({ theme }) => (
 					Publications
 				</h2>
 				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
 					}`}
 				>
@@ -72,25 +145,28 @@ const Resume = ({ theme }) => (
 					Research Experiences
 				</h2>
 				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg mb-4 ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
-					} mb-4`}
+					}`}
 				>
 					<h3 className="text-lg md:text-xl font-bold mb-4">
 						AIoT research group at BKAI center, HUST
 					</h3>
 					<ul className="list-disc list-inside space-y-1">
 						<li>Research Assistant - Federated Learning for MEC networks</li>
-						<li><b>Supervisor</b>: Assoc. Prof. Phi Le Nguyen</li>
 						<li>
-							<b>Description</b>: Formulating the hierarchical Federated Learning model
-							for 3-tier MEC networks; Proposing a FL model which leverages
-							knowledge distillation to handle mobility in MEC networks.
+							<b>Supervisor</b>: Assoc. Prof. Phi Le Nguyen
+						</li>
+						<li>
+							<b>Description</b>: Formulating the hierarchical Federated
+							Learning model for 3-tier MEC networks; Proposing a FL model which
+							leverages knowledge distillation to handle mobility in MEC
+							networks.
 						</li>
 					</ul>
 				</div>
 				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
 					}`}
 				>
@@ -102,12 +178,14 @@ const Resume = ({ theme }) => (
 							Research Assistant - Machine learning to optimise the operation
 							and maintenance of a sewer mining plant
 						</li>
-						<li><b>Supervisor</b>: Assoc. Prof. Phi Le Nguyen</li>
 						<li>
-							<b>Description</b>: Exploring data; Preprocessing data to handle noise,
-							outlier, missing values; Analysing correlation between variables;
-							Applying machine learning algorithms and deep learning models to
-							perform the prediction task; writing the manuscript.
+							<b>Supervisor</b>: Assoc. Prof. Phi Le Nguyen
+						</li>
+						<li>
+							<b>Description</b>: Exploring data; Preprocessing data to handle
+							noise, outlier, missing values; Analysing correlation between
+							variables; Applying machine learning algorithms and deep learning
+							models to perform the prediction task; writing the manuscript.
 						</li>
 					</ul>
 				</div>
@@ -118,7 +196,7 @@ const Resume = ({ theme }) => (
 					Courseworks
 				</h2>
 				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
 					}`}
 				>
@@ -166,20 +244,38 @@ const Resume = ({ theme }) => (
 					Skills
 				</h2>
 				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
 					}`}
 				>
 					<ul className="list-disc list-inside space-y-2">
-						<li><b>Programming Languages</b>: Python, Java, JavaScript, C/C++, SQL</li>
-						<li><b>Machine Learning Libraries</b>: Scikit-learn, Numpy, Pandas</li>
-						<li><b>Deep Learning Frameworks</b>: Pytorch, Tensorflow</li>
-						<li><b>Web Technology</b>: NodeJs, ReactJs, TailwindCSS</li>
-						<li><b>Database Management Systems</b>: PostgreSQL, MySQL, MongoDB</li>
-						<li><b>Operating Systems</b>: Linux</li>
-						<li><b>Editor</b>: LATEX, VScode, MS Office</li>
-						<li><b>Soft skills</b>: Teamwork management, Leadership</li>
-						<li><b>Others</b>: Figma, Git & Version control, Adobe services</li>
+						<li>
+							<b>Programming Languages</b>: Python, Java, JavaScript, C/C++, SQL
+						</li>
+						<li>
+							<b>Machine Learning Libraries</b>: Scikit-learn, Numpy, Pandas
+						</li>
+						<li>
+							<b>Deep Learning Frameworks</b>: Pytorch, Tensorflow
+						</li>
+						<li>
+							<b>Web Technology</b>: NodeJs, ReactJs, TailwindCSS
+						</li>
+						<li>
+							<b>Database Management Systems</b>: PostgreSQL, MySQL, MongoDB
+						</li>
+						<li>
+							<b>Operating Systems</b>: Linux
+						</li>
+						<li>
+							<b>Editor</b>: LATEX, VScode, MS Office
+						</li>
+						<li>
+							<b>Soft skills</b>: Teamwork management, Leadership
+						</li>
+						<li>
+							<b>Others</b>: Figma, Git & Version control, Adobe services
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -189,7 +285,7 @@ const Resume = ({ theme }) => (
 					Honors and Awards
 				</h2>
 				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
 					}`}
 				>
@@ -208,7 +304,7 @@ const Resume = ({ theme }) => (
 					References
 				</h2>
 				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
 					}`}
 				>
@@ -226,7 +322,7 @@ const Resume = ({ theme }) => (
 					Social Activities
 				</h2>
 				<div
-					className={`bg-cardBg p-4 md:p-6 rounded-lg shadow-lg ${
+					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
 						theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
 					}`}
 				>

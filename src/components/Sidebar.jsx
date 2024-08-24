@@ -12,32 +12,11 @@ const Sidebar = ({ theme }) => {
 	const [showDetails, setShowDetails] = useState(false);
 
 	useEffect(() => {
-		const setSidebarHeight = () => {
-			if (window.innerWidth <= 768) {
-				sidebarRef.current.style.height = "auto";
-				sidebarRef.current.style.position = "static";
-				contentRef.current.style.paddingLeft = "0";
-			} else {
-				sidebarRef.current.style.height = window.innerHeight + "px";
-				sidebarRef.current.style.position = "fixed";
-				contentRef.current.style.paddingLeft =
-					sidebarRef.current.offsetWidth + "px";
-				setShowDetails(true);
-			}
-		};
-
-		setSidebarHeight();
-
-		window.addEventListener("resize", setSidebarHeight);
+			setShowDetails(true);
 
 		return () => {
-			window.removeEventListener("resize", setSidebarHeight);
 		};
 	}, []);
-
-	const toggleDetails = () => {
-		setShowDetails(!showDetails);
-	};
 
 	return (
 		<>
@@ -45,7 +24,7 @@ const Sidebar = ({ theme }) => {
 				ref={sidebarRef}
 				className={`${
 					theme === "dark" ? "bg-neutral-600" : "bg-neutral-400"
-				} px-8 pt-8 w-full md:w-1/3 lg:w-1/5`}
+				} px-8 pt-8 w-full sm:w-68 md:w-72 lg:w-160`}
 			>
 				<div className="sidebar-container">
 					<div className="sidebar-content">
@@ -65,12 +44,12 @@ const Sidebar = ({ theme }) => {
 										theme === "dark" ? "text-gray-400" : "text-gray-200"
 									}`}
 								>
-									Research Assistance
+									PhD Student
 								</p>
 							</div>
 						</div>
 						<div>
-							{showDetails && (
+							{/* {showDetails && ( */}
 								<>
 									<div className="flex items-center mb-4">
 										<PlaceIcon className="mr-2" />
@@ -132,17 +111,17 @@ const Sidebar = ({ theme }) => {
 										</div>
 									</div>
 								</>
-							)}
+
 						</div>
 						<div className="flex justify-center space-x-4">
 							{window.innerWidth <= 640 && (
 								<button
-									onClick={toggleDetails}
+									// onClick={toggleDetails}
 									className={`text-gray-400 font-bold text-lg hover:text-primary focus:outline-none mb-4 ${
 										theme === "dark" ? "text-gray-400" : "text-gray-600"
 									}`}
 								>
-									{showDetails ? "Show less" : "Show more"}
+									{/* {showDetails ? "Show less" : "Show more"} */}
 								</button>
 							)}
 						</div>
