@@ -302,13 +302,15 @@ const Resume = ({ theme }) => (
 						</li>
 						<li>Student of 5 Merits Award, HUST</li>
 						<li>Academic Scholarship, HUST</li>
+						<li>First-class Honor Degree, HUST</li>
+						<li>NUS Research Scholarship, NUS</li>
 					</ul>
 				</div>
 			</div>
 
 			<div className="mb-8">
 				<h2 className="text-2xl md:text-3xl font-semibold mb-4 border-b-2 border-neutral-600 pb-2">
-					References
+					Supervisors
 				</h2>
 				<div
 					className={`bg-cardBg py-5 px-6 rounded-lg shadow-lg ${
@@ -317,8 +319,12 @@ const Resume = ({ theme }) => (
 				>
 					<ul className="list-disc list-inside">
 						<li>
-							Assoc. Prof. Phi Le Nguyen, Managing Director of the International
+							Assoc. Prof. <strong>Phi Le Nguyen</strong>, Managing Director of the International
 							Research Center for Artificial Intelligence (BKAI), HUST
+						</li>
+						<li>
+							Professor <strong>Biplab Sikdar</strong>, Head of the Department (ECE), College of
+							Design and Engineering (CDE), NUS
 						</li>
 					</ul>
 				</div>
